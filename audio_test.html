@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Audio Test</title>
+</head>
+
+<body>
+	<audio controls>
+		<source src="sound/start_game.mp3" type="audio/mpeg">
+	</audio>
+	<br>
+	<audio controls>
+		<source src="sound/bkoke_block.ogg" type="audio/mpeg">
+	</audio>
+	<br>
+	<button id="play">Play</button>
+
+	<script>
+
+
+		let play = document.querySelector('#play')
+
+		function sound() {
+			let audio = new Audio('sound/bkoke_block.ogg')
+			audio.load()
+			audio.play()
+			console.log(123);
+		}
+
+		play.addEventListener('click', sound)
+
+	</script>
+</body>
+
+</html>
